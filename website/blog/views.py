@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Post, Category
+from .models import Post
 
 
 def home(request):
@@ -10,3 +10,11 @@ def home(request):
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, "blog/post_detail.html", {"post": post})
+
+
+def travel(request):
+    return render(request, "blog/travel.html")
+
+
+def cooking(request):
+    return render(request, "blog/cooking.html")
