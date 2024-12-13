@@ -1,0 +1,6 @@
+@media (max-width: 768px) {
+    .social-icons {
+        justify-content: center;
+        margin: 1rem 0;
+    }
+}
