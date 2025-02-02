@@ -1,19 +1,24 @@
 /* Base Styles */
 :root {
-    --primary-color: #FF6B01;
-    /* Bright Orange */
-    --secondary-color: #FFFFFF;
-    /* White */
-    --accent-color: #353535;
-    /* Dark Gray */
+    --primary-color: #2C3E50;
+    /* Dark Blue-Gray */
+    --secondary-color: #ECF0F1;
+    /* Soft Light Gray */
+    --accent-color: #3498DB;
+    /* Calm Blue */
     --background-color: #FFFFFF;
-    --text-color: #353535;
-    --header-background: #FF6B01;
+    /* White */
+    --text-color: #333333;
+    /* Dark Gray */
+    --header-background: #2C3E50;
+    /* Matches Primary */
+    --hero-background: #1A252F;
+    /* Deep Charcoal */
 }
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
 }
@@ -50,9 +55,11 @@ nav a {
     text-decoration: none;
     color: var(--secondary-color);
     font-size: 1.2rem;
+    transition: color 0.3s;
 }
 
 nav a:hover {
+    color: var(--accent-color);
     text-decoration: underline;
 }
 
@@ -61,8 +68,8 @@ nav a:hover {
     position: relative;
     text-align: center;
     color: var(--secondary-color);
-    background-color: var(--primary-color);
-    padding: 2rem;
+    background-color: var(--hero-background);
+    padding: 3rem 2rem;
 }
 
 .hero h2 {
@@ -75,22 +82,16 @@ nav a:hover {
 }
 
 /* Banner Image */
-/* The hero image */
 .hero-image {
-    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/css/images/banner.png");
-
-    /* Set a specific height */
-    height: 50%;
-
-    /* Position and center the image to scale nicely on all screens */
+    background-image: url("../images/banner.png");
+    height: 250px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 }
 
-/* Place text in the middle of the image */
+/* Centered Hero Text */
 .hero-text {
     text-align: center;
     position: absolute;
@@ -98,8 +99,10 @@ nav a:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    border-radius: 5px;
 }
-
 
 /* Blog Section */
 #blog {
@@ -121,6 +124,11 @@ nav a:hover {
     max-width: 600px;
     background-color: var(--background-color);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.blog-post:hover {
+    transform: scale(1.02);
 }
 
 .blog-post h3 {
@@ -134,12 +142,14 @@ nav a:hover {
 }
 
 .blog-post a {
-    color: var(--primary-color);
+    color: var(--accent-color);
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 .blog-post a:hover {
+    color: var(--primary-color);
     text-decoration: underline;
 }
 
@@ -147,34 +157,6 @@ nav a:hover {
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: var(--accent-color);
+    background-color: var(--primary-color);
     color: var(--secondary-color);
-}
-
-.hero-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 1em;
-}
-
-.blog-content {
-    padding: 1em;
-    line-height: 1.6;
-}
-
-.blog-meta {
-    font-size: 0.9em;
-    color: #6d6d6d;
-}
-
-.image-gallery {
-    display: flex;
-    gap: 1em;
-}
-
-.image-gallery img {
-    width: calc(50% - 1em);
-    height: auto;
-    border-radius: 8px;
 }
