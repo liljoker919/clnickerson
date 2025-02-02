@@ -1,162 +1,132 @@
 /* Base Styles */
 :root {
-    --primary-color: #2C3E50;
-    /* Dark Blue-Gray */
-    --secondary-color: #ECF0F1;
-    /* Soft Light Gray */
-    --accent-color: #3498DB;
-    /* Calm Blue */
-    --background-color: #FFFFFF;
-    /* White */
-    --text-color: #333333;
-    /* Dark Gray */
-    --header-background: #2C3E50;
-    /* Matches Primary */
-    --hero-background: #1A252F;
-    /* Deep Charcoal */
+    --primary-color: #222222;
+    --secondary-color: #f4f4f4;
+    --accent-color: #b58554;
+    /* Gold Accent */
+    --background-color: #ffffff;
+    --text-color: #333;
+    --nav-background: #1F2A37;
 }
 
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
     background-color: var(--background-color);
     color: var(--text-color);
 }
 
-/* Header Styles */
+/* Navigation Bar */
 header {
-    background-color: var(--header-background);
-    color: var(--secondary-color);
+    background-color: var(--nav-background);
     padding: 1rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2rem;
-    z-index: 10;
-    position: relative;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    align-items: center;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+/* Navigation Links */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
     margin: 0;
-    position: relative;
-    z-index: 10;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
 }
 
 nav a {
     text-decoration: none;
     color: var(--secondary-color);
     font-size: 1.2rem;
+    font-weight: 500;
     transition: color 0.3s;
 }
 
 nav a:hover {
     color: var(--accent-color);
-    text-decoration: underline;
+}
+
+/* Social Media Icons */
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
 }
 
 /* Hero Section */
 .hero {
-    position: relative;
     text-align: center;
-    color: var(--secondary-color);
-    background-color: var(--hero-background);
     padding: 3rem 2rem;
+    background-color: var(--secondary-color);
 }
 
 .hero h2 {
     font-size: 2.5rem;
+    font-weight: bold;
     margin-bottom: 1rem;
 }
 
-.hero p {
-    font-size: 1.2rem;
+/* Featured Blog Posts */
+.featured-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    max-width: 1000px;
+    margin: auto;
 }
 
-/* Banner Image */
-.hero-image {
-    background-image: url("../images/banner.png");
-    height: 250px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-/* Centered Hero Text */
-.hero-text {
+.post {
     text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    background: rgba(0, 0, 0, 0.6);
+    background: var(--background-color);
     padding: 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.post img {
+    width: 100%;
     border-radius: 5px;
 }
 
-/* Blog Section */
-#blog {
-    padding: 2rem;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-}
-
-#blog h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.blog-post {
-    border: 1px solid var(--accent-color);
-    padding: 1rem;
-    margin: 1rem auto;
-    max-width: 600px;
-    background-color: var(--background-color);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.blog-post:hover {
-    transform: scale(1.02);
-}
-
-.blog-post h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.blog-post p {
+.post h3 {
     font-size: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 0.5rem;
 }
 
-.blog-post a {
-    color: var(--accent-color);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.blog-post a:hover {
-    color: var(--primary-color);
-    text-decoration: underline;
-}
-
-/* Footer Styles */
+/* Footer */
 footer {
     text-align: center;
-    padding: 1rem;
-    background-color: var(--primary-color);
+    padding: 1.5rem;
+    background-color: var(--nav-background);
     color: var(--secondary-color);
+    font-size: 1rem;
 }
