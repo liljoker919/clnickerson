@@ -75,31 +75,31 @@ nav a:hover {
 }
 
 /* Banner Image */
+/* The hero image */
+.hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/css/images/banner.png");
 
-.banner-container {
-    width: 100%;
-    height: 100hv;
-    overflow: hidden;
-    /* Ensures any excess image is hidden */
-}
+    /* Set a specific height */
+    height: 50%;
 
-.banner {
-    width: 100%;
-    max-width: 100%;
-    height: 100vh;
-    max-height: 100vh;
-    /* Set the banner height to fill the viewport height */
-    object-fit: cover;
-    /* Ensures the image scales proportionally without distortion */
-    display: block;
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    overflow: hidden;
-    /* Prevent scrolling if content overflows */
-    box-sizing: border-box;
 }
+
+/* Place text in the middle of the image */
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
 
 /* Blog Section */
 #blog {
@@ -149,4 +149,32 @@ footer {
     padding: 1rem;
     background-color: var(--accent-color);
     color: var(--secondary-color);
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+.blog-content {
+    padding: 1em;
+    line-height: 1.6;
+}
+
+.blog-meta {
+    font-size: 0.9em;
+    color: #6d6d6d;
+}
+
+.image-gallery {
+    display: flex;
+    gap: 1em;
+}
+
+.image-gallery img {
+    width: calc(50% - 1em);
+    height: auto;
+    border-radius: 8px;
 }
