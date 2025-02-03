@@ -280,3 +280,223 @@ blockquote {
     font-weight: bold;
     color: #007BFF;
 }
+
+.post a {
+    text-decoration: none;
+    /* Removes underline */
+    color: inherit;
+    /* Keeps the original text color */
+    display: block;
+    /* Makes the entire block clickable */
+}
+
+.post img {
+    width: 100%;
+    /* Adjust image width to fit */
+    border-radius: 8px;
+    /* Optional: rounded corners */
+    transition: transform 0.3s ease-in-out;
+    /* Smooth hover effect */
+}
+
+.post a:hover img {
+    transform: scale(1.05);
+    /* Slight zoom on hover */
+}
+
+
+.predictions {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.predictions h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.predictions table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.predictions th,
+.predictions td {
+    border: 1px solid #ccc;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.predictions th {
+    background-color: #1f2a37;
+    color: white;
+    font-weight: bold;
+}
+
+.predictions tbody tr:nth-child(even) {
+    background-color: #e9e9e9;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #1F2A37;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+/* Slider Container */
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+/* Individual Slides */
+.slide {
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+
+/* Slide Image */
+.slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Caption Text */
+.caption {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+}
+
+/* Navigation Buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 15px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    transition: 0.3s;
+    user-select: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Image Slider */
+.image-slider {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    /* Adjust width as needed */
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* Navigation Buttons */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
