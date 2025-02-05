@@ -16,6 +16,7 @@ body {
     line-height: 1.6;
     background-color: var(--background-color);
     color: var(--text-color);
+    padding: 1rem;
 }
 
 /* Navigation Bar */
@@ -93,6 +94,24 @@ nav a:hover {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+
+/* Adjust padding for Cooking & Porsche pages */
+.main-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
 /* Featured Blog Posts */
@@ -199,20 +218,6 @@ footer {
     border-radius: 10px;
 }
 
-.hero {
-    text-align: center;
-}
-
-.hero img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin: 1rem 0;
-}
 
 .date {
     color: #777;
@@ -283,11 +288,9 @@ blockquote {
 
 .post a {
     text-decoration: none;
-    /* Removes underline */
     color: inherit;
     /* Keeps the original text color */
     display: block;
-    /* Makes the entire block clickable */
 }
 
 .post img {
@@ -369,134 +372,134 @@ tr:hover {
 
 /* Slider Container */
 .slider-container {
-    position: relative;
-    max-width: 100%;
-    margin: 20px auto;
-    overflow: hidden;
-}
 
-/* Individual Slides */
-.slide {
-    display: none;
-    width: 100%;
-    text-align: center;
-}
+    /* Slider Container */
+    .slider-container {
+        position: relative;
+        max-width: 100%;
+        margin: 20px auto;
+        overflow: hidden;
 
-/* Slide Image */
-.slide img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 10px;
-}
+        /* Individual Slides */
+        .slide {
+            display: none;
+            width: 100%;
+            text-align: center;
+            min-width: 100%;
+            box-sizing: border-box;
+        }
 
-/* Caption Text */
-.caption {
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 10px;
-    width: 100%;
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-}
+        /* Slide Image */
+        .slide img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
 
-/* Navigation Buttons */
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 15px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    background: rgba(0, 0, 0, 0.5);
-    border: none;
-    transition: 0.3s;
-    user-select: none;
-}
+    /* Caption Text */
+    .caption {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 10px;
+        width: 100%;
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+    }
 
-.prev {
-    left: 10px;
-}
+    /* Navigation Buttons */
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 15px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        background: rgba(0, 0, 0, 0.5);
+        border: none;
+        transition: 0.3s;
+        user-select: none;
+    }
 
-.next {
-    right: 10px;
-}
+    .prev {
+        left: 10px;
+    }
 
-.prev:hover,
-.next:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
+    .next {
+        right: 10px;
+    }
 
-
-/* Image Slider */
-.image-slider {
-    position: relative;
-    width: 100%;
-    max-width: 900px;
-    /* Adjust width as needed */
-    margin: 20px auto;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.slider-container {
-    position: relative;
-    max-width: 100%;
-    margin: auto;
-    overflow: hidden;
-}
-
-.slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-    min-width: 100%;
-    box-sizing: border-box;
-}
-
-.slide img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 10px;
-}
+    .prev:hover,
+    .next:hover {
+        background: rgba(0, 0, 0, 0.8);
+    }
 
 
-/* Navigation Buttons */
-.prev,
-.next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 18px;
-    border-radius: 50%;
-}
+    /* Image Slider */
+    .image-slider {
+        position: relative;
+        width: 100%;
+        max-width: 900px;
+        /* Adjust width as needed */
+        margin: 20px auto;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
 
-.prev {
-    left: 10px;
-}
+    .slider-container {
+        position: relative;
+        /* Removed duplicate .slider-container */
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
 
-.next {
-    right: 10px;
-}
+    .slide {
+        min-width: 100%;
+        box-sizing: border-box;
+    }
 
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
+    .slide img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+
+    /* Navigation Buttons */
+    .prev,
+    .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 50%;
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
